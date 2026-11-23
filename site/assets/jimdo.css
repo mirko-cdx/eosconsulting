@@ -80,9 +80,11 @@ a:focus-visible, input:focus-visible, textarea:focus-visible, label:focus-visibl
   box-sizing: border-box;
 }
 .j-hgrid { display: flex; gap: 40px; align-items: flex-start; margin: 0 0 20px; }
-.j-col { box-sizing: border-box; min-width: 0; flex: 1 1 0; width: auto !important; }
+/* Spalten nutzen die volle Breite im Verhältnis der Original-Spaltenbreiten */
+.j-col { box-sizing: border-box; min-width: 0; flex: 1 1 0; }
 .j-col:empty { display: none; }
-.j-image img { width: 720px; }
+/* Kopfbilder immer so breit wie die Spalten darunter */
+.j-image img { width: 100%; height: auto; }
 .j-col > * + * { margin-top: 15px; }
 
 .j-header {
@@ -114,8 +116,15 @@ a:focus-visible, input:focus-visible, textarea:focus-visible, label:focus-visibl
 
 hr { border: 0; border-top: 1px solid #ddd; margin: 15px 0; }
 
-.gallery { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
-.gallery img { display: block; }
+/* Kundenlogos: zurückhaltend in Graustufen, Farbe beim Darüberfahren */
+.gallery { display: flex; flex-wrap: wrap; gap: 28px 44px; align-items: center; padding: 10px 0; }
+.gallery img {
+  display: block; height: 40px; width: auto; max-width: 110px; object-fit: contain;
+  filter: grayscale(100%); opacity: .55;
+  transition: filter .3s ease-in, opacity .3s ease-in;
+}
+.gallery img:hover { filter: none; opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .gallery img { transition: none; } }
 
 /* Kontaktformular im Jimdo-Stil */
 .j-form { color: #6f6f6f; font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif; font-size: 13px; }
@@ -179,7 +188,7 @@ hr { border: 0; border-top: 1px solid #ddd; margin: 15px 0; }
   .jtpl-content { padding-top: 87px; }
   .j-hgrid { gap: 0; }
   .j-hgrid { flex-direction: column; }
-  .j-col { width: 100% !important; }
+  .j-col { width: 100%; flex: none !important; }
   .j-col:empty { display: none; }
   .j-col + .j-col:not(:empty) { margin-top: 15px; }
 }
