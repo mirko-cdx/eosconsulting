@@ -1,21 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://eosconsulting.de/</loc></url>
+  <url><loc>https://eosconsulting.de/en/</loc></url>
   <url><loc>https://eosconsulting.de/service/projektmanagement/</loc></url>
+  <url><loc>https://eosconsulting.de/en/services/project-management/</loc></url>
   <url><loc>https://eosconsulting.de/service/projektmanagement/operatives-pm/</loc></url>
+  <url><loc>https://eosconsulting.de/en/services/project-management/operational-pm/</loc></url>
   <url><loc>https://eosconsulting.de/service/projektmanagement/strategisches-pm/</loc></url>
+  <url><loc>https://eosconsulting.de/en/services/project-management/strategic-pm/</loc></url>
   <url><loc>https://eosconsulting.de/service/prozessmanagement/</loc></url>
+  <url><loc>https://eosconsulting.de/en/services/process-management/</loc></url>
   <url><loc>https://eosconsulting.de/service/qualit%C3%A4tsmanagement/</loc></url>
+  <url><loc>https://eosconsulting.de/en/services/quality-management/</loc></url>
   <url><loc>https://eosconsulting.de/service/r-d-controlling/</loc></url>
+  <url><loc>https://eosconsulting.de/en/services/rd-controlling/</loc></url>
   <url><loc>https://eosconsulting.de/profil/</loc></url>
+  <url><loc>https://eosconsulting.de/en/profile/</loc></url>
   <url><loc>https://eosconsulting.de/profil/arbeitsweise/</loc></url>
+  <url><loc>https://eosconsulting.de/en/profile/approach/</loc></url>
   <url><loc>https://eosconsulting.de/profil/arbeitsweise/im-prozess/</loc></url>
+  <url><loc>https://eosconsulting.de/en/profile/approach/process/</loc></url>
   <url><loc>https://eosconsulting.de/profil/arbeitsweise/im-projekt/</loc></url>
+  <url><loc>https://eosconsulting.de/en/profile/approach/project/</loc></url>
   <url><loc>https://eosconsulting.de/profil/werte/</loc></url>
+  <url><loc>https://eosconsulting.de/en/profile/values/</loc></url>
   <url><loc>https://eosconsulting.de/profil/leitbild/</loc></url>
+  <url><loc>https://eosconsulting.de/en/profile/mission/</loc></url>
   <url><loc>https://eosconsulting.de/profil/vision/</loc></url>
+  <url><loc>https://eosconsulting.de/en/profile/vision/</loc></url>
   <url><loc>https://eosconsulting.de/klienten/</loc></url>
+  <url><loc>https://eosconsulting.de/en/clients/</loc></url>
   <url><loc>https://eosconsulting.de/kommunikation/</loc></url>
+  <url><loc>https://eosconsulting.de/en/communication/</loc></url>
   <url><loc>https://eosconsulting.de/karriere/</loc></url>
+  <url><loc>https://eosconsulting.de/en/careers/</loc></url>
   <url><loc>https://eosconsulting.de/kontakt/</loc></url>
+  <url><loc>https://eosconsulting.de/en/contact/</loc></url>
+  <url><loc>https://eosconsulting.de/datenschutz/</loc></url>
+  <url><loc>https://eosconsulting.de/en/privacy/</loc></url>
 </urlset>

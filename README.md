@@ -13,15 +13,17 @@ site/                      Website (wird 1:1 ausgeliefert)
   klienten/, kommunikation/, karriere/, kontakt/
   about/                   Impressum (Original-URL)
   datenschutz/             Datenschutzerklärung (neu, ersetzt /j/privacy)
+  en/                      Englische Version (gleiche Struktur, englische URLs), Umschalter DE | EN im Kopf
   assets/jimdo.css         Layout nach Original-CSS (Georgia-Navigation, Exo-Überschriften #75a0ca, Lucida-Text #6f6f6f)
   assets/img/              Original-Bilder aus Jimdo
   assets/fonts/            Exo, Open Sans, Lora – selbst gehostet (SIL OFL 1.1)
   assets/kontakt.js        Kontaktformular -> öffnet Mail an haucke@eosconsulting.de
+  assets/calendly.js       Calendly-Terminbuchung, wird erst nach Klick geladen (Zwei-Klick-Lösung)
 nginx.conf                 Server-Konfiguration inkl. Umleitungen (/j/privacy, /impressum)
 Dockerfile                 nginx:alpine-Image
 ```
 
-Keine Cookies, kein Tracking, keine externen Ressourcen, keine Zugriffsprotokolle.
+Keine Cookies, kein Tracking, keine Zugriffsprotokolle. Einzige externe Einbindung: Calendly auf /kontakt/ bzw. /en/contact/, erst nach Klick.
 
 ## Deployment (Coolify)
 
