@@ -4,16 +4,21 @@ Website der eosconsulting GmbH – statische Seite (HTML/CSS, keine Build-Pipeli
 
 ## Struktur
 
+1:1-Nachbau der bisherigen Jimdo-Creator-Seite (Inhalte, Bilder, Layout, Schriften, Farben, URLs).
+
 ```
-site/                 Website-Inhalte (wird 1:1 ausgeliefert)
-  index.html          Startseite: Schriftfeld, Leistungen, Profil, Kontakt
-  impressum/          Impressum
-  datenschutz/        Datenschutzerklärung
-  404.html            Fehlerseite
-  assets/style.css    Gestaltung (Taubenblau #7f95ae, Schieferblau #1c2633)
-  assets/fonts/       Archivo (variabel), selbst gehostet, SIL OFL 1.1
-nginx.conf            Server-Konfiguration inkl. 301-Umleitungen der alten Jimdo-URLs
-Dockerfile            nginx:alpine-Image
+site/                      Website (wird 1:1 ausgeliefert)
+  index.html               Service (Startseite)
+  service/…, profil/…      Unterseiten mit denselben URLs wie bei Jimdo
+  klienten/, kommunikation/, karriere/, kontakt/
+  about/                   Impressum (Original-URL)
+  datenschutz/             Datenschutzerklärung (neu, ersetzt /j/privacy)
+  assets/jimdo.css         Layout nach Original-CSS (Georgia-Navigation, Exo-Überschriften #75a0ca, Lucida-Text #6f6f6f)
+  assets/img/              Original-Bilder aus Jimdo
+  assets/fonts/            Exo, Open Sans, Lora – selbst gehostet (SIL OFL 1.1)
+  assets/kontakt.js        Kontaktformular -> öffnet Mail an haucke@eosconsulting.de
+nginx.conf                 Server-Konfiguration inkl. Umleitungen (/j/privacy, /impressum)
+Dockerfile                 nginx:alpine-Image
 ```
 
 Keine Cookies, kein Tracking, keine externen Ressourcen, keine Zugriffsprotokolle.

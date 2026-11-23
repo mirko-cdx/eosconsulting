@@ -1,0 +1,178 @@
+/* eosconsulting.de – Nachbau des Jimdo-Creator-Layouts (Stand 2019)
+   Werte aus layout/variations.css und customized.css der Originalseite.
+   Webfonts selbst gehostet (SIL OFL 1.1): Exo, Open Sans, Lora. */
+
+@font-face { font-family: "Exo"; src: url("/assets/fonts/exo-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Exo"; src: url("/assets/fonts/exo-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Open Sans"; src: url("/assets/fonts/open-sans-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Open Sans"; src: url("/assets/fonts/open-sans-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Lora"; src: url("/assets/fonts/lora-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: #fff;
+  color: #798486;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+img { border: 0; max-width: 100%; height: auto; }
+a { color: #75a0ca; text-decoration: none; transition: color .3s ease-in; }
+a:focus-visible, input:focus-visible, textarea:focus-visible, label:focus-visible { outline: 2px solid #75a0ca; outline-offset: 2px; }
+
+/* ---------- Kopfbereich (fixiert, weiß 90 %) ---------- */
+.jtpl-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,.9);
+  padding: 10px 0;
+  min-height: 100px;
+  box-sizing: border-box;
+}
+.jtpl-topbar {
+  max-width: 1000px; margin: 0 auto;
+  display: flex; align-items: center;
+  min-height: 80px;
+}
+.jtpl-logo { width: 250px; padding: 0 20px; box-sizing: border-box; flex: none; }
+.jtpl-logo img { display: block; width: 200px; height: auto; max-height: 120px; }
+
+.jtpl-navigation { flex: 1; margin: 6px 30px 0; text-align: right; max-width: 700px; min-width: 280px; margin-left: auto; }
+.jtpl-navigation ul { list-style: none; margin: 0; padding: 0; }
+.jtpl-navigation a {
+  display: block;
+  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+  font-size: 15px; font-weight: normal; font-style: normal;
+  color: #6f6f6f;
+  transition: background-color .3s ease-in, color .3s ease-in;
+}
+.jtpl-navigation a:hover, .jtpl-navigation a:focus, .jtpl-navigation li.current > a { color: #75a0ca; }
+.nav-l0 { float: right; }
+.nav-l0 > li { display: inline-block; position: relative; text-align: left; }
+.nav-l0 > li > a { line-height: 30px; padding: 5px 15px; margin: 0 5px 4px; border-radius: 2px; }
+.nav-l0 > li:last-child > a { margin-right: 0; }
+.nav-l0 > li.current > a { font-weight: bold; }
+
+.nav-l1, .nav-l2 {
+  display: none; position: absolute; z-index: 10;
+  min-width: 150px;
+  background: rgba(255,255,255,.9);
+  border: 1px solid rgba(0,0,0,.1);
+  text-align: left;
+}
+.nav-l1 { left: 5px; top: 100%; }
+.nav-l2 { left: 100%; top: -1px; border-left: none; }
+.nav-l1 > li, .nav-l2 > li { position: relative; line-height: 1.5; }
+.nav-l1 a, .nav-l2 a { padding: 10px 15px; white-space: nowrap; line-height: 1.5; }
+.nav-l0 > li:hover > .nav-l1, .nav-l0 > li:focus-within > .nav-l1,
+.nav-l1 > li:hover > .nav-l2, .nav-l1 > li:focus-within > .nav-l2 { display: block; }
+
+.nav-toggle { position: absolute; opacity: 0; pointer-events: none; }
+.nav-burger { display: none; }
+
+/* ---------- Inhalt ---------- */
+.jtpl-content {
+  display: block;
+  /* Wie im Original: Inhaltsbereich linksbündig (Kopf- und Fußzeile mittig) */
+  max-width: 1000px; margin: 0;
+  padding: 110px 25px 20px;
+  box-sizing: border-box;
+}
+.j-hgrid { display: flex; justify-content: space-between; align-items: flex-start; margin: 0 0 15px; }
+.j-col { box-sizing: border-box; min-width: 0; }
+.j-col > * + * { margin-top: 15px; }
+
+.j-header {
+  margin: 0;
+  font-family: "Exo", sans-serif;
+  font-size: 13px; font-weight: bold; font-style: normal;
+  line-height: 1.5em; text-align: left; text-transform: none;
+  color: #75a0ca;
+  word-wrap: break-word;
+}
+.j-text {
+  color: #6f6f6f;
+  font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+  font-size: 13px; line-height: 1.5em;
+  word-wrap: break-word;
+}
+.j-text p { margin: 0; }
+.j-text ul, .j-text ol { margin: 0; padding-left: 20px; }
+.j-text table { border-collapse: separate; border-spacing: 0; }
+.j-text td { padding: 1px; vertical-align: top; }
+.j-text a { color: #75a0ca; }
+.j-text strong, .j-text b { font-weight: bold; }
+
+.j-spacing { display: block; }
+.j-image { margin: 0; }
+.j-image img { display: block; }
+
+hr { border: 0; border-top: 1px solid #ddd; margin: 15px 0; }
+
+.gallery { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.gallery img { display: block; }
+
+/* Kontaktformular im Jimdo-Stil */
+.j-form { color: #6f6f6f; font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif; font-size: 13px; }
+.j-form-field { margin: 0 0 10px; }
+.j-form label { display: block; margin-bottom: 3px; }
+.j-form label em { font-style: normal; color: #75a0ca; }
+.j-form input[type=text], .j-form input[type=email], .j-form textarea {
+  width: 100%; box-sizing: border-box;
+  border: 1px solid #ccc; border-radius: 0;
+  padding: 6px 8px;
+  font: inherit; color: #333; background: #fff;
+}
+.j-form textarea { resize: vertical; }
+.j-form input[type=submit] {
+  font: inherit; color: #fff; background: #75a0ca;
+  border: 1px solid #75a0ca; padding: 6px 18px; cursor: pointer;
+}
+.j-form input[type=submit]:hover { background: #5f8cb8; border-color: #5f8cb8; }
+.j-form-note { margin: 0 0 10px; }
+
+/* ---------- Fußzeile ---------- */
+.jtpl-footer { padding: 20px 25px; }
+.jtpl-footer__inner {
+  max-width: 1000px; margin: 0 auto; box-sizing: border-box;
+  padding: 0 25px;
+  font-family: Lora, serif; font-size: 12px; color: #888;
+}
+.jtpl-footer a { color: #888; }
+.jtpl-footer a:hover { color: #75a0ca; }
+
+/* ---------- Mobil (Jimdo: Burger-Menü unter 768 px) ---------- */
+@media (max-width: 768px) {
+  .jtpl-header { position: absolute; min-height: 67px; padding: 3px 0; }
+  .jtpl-topbar { min-height: 61px; }
+  .jtpl-logo { width: 170px; padding: 5px 15px; }
+  .jtpl-logo img { width: auto; max-height: 45px; }
+  .nav-burger {
+    display: block; margin-left: auto; margin-right: 15px;
+    width: 30px; height: 24px; position: relative; cursor: pointer;
+  }
+  .nav-burger span, .nav-burger span::before, .nav-burger span::after {
+    content: ""; position: absolute; left: 0; right: 0; height: 2px; background: #000; border-radius: 1000px;
+  }
+  .nav-burger span { top: 11px; }
+  .nav-burger span::before { top: -9px; }
+  .nav-burger span::after { top: 9px; }
+  .jtpl-navigation {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    margin: 0; max-width: none; min-width: 0;
+    background: rgba(255,255,255,.97); border-top: 1px solid rgba(0,0,0,.1);
+    text-align: left;
+  }
+  .nav-toggle:checked + .jtpl-header .jtpl-navigation { display: block; }
+  .nav-l0 { float: none; }
+  .nav-l0 > li { display: block; }
+  .nav-l0 > li > a { margin: 0; padding: 10px 20px; }
+  .nav-l1, .nav-l2 { display: block; position: static; border: 0; background: none; min-width: 0; }
+  .nav-l1 a { padding: 6px 20px 6px 40px; }
+  .nav-l2 a { padding: 6px 20px 6px 60px; }
+  .jtpl-content { padding-top: 87px; }
+  .j-hgrid { flex-direction: column; }
+  .j-col { width: 100% !important; }
+  .j-col:empty { display: none; }
+  .j-col + .j-col:not(:empty) { margin-top: 15px; }
+}
